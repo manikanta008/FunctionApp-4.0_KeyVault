@@ -1,0 +1,52 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "keyvaultName": {
+        "type": "string",
+        "metadata": {
+            "description": "Name of the KeyVault to create."
+        }
+      },
+      "keyvaultSku": {
+          "type": "string",
+          "defaultValue": "Standard",
+          "metadata": {
+              "description": "SKU level of the KeyVault that is being deployed."
+          }
+      },
+      "keyVaultSoftDelete": {
+          "type": "string",
+          "allowedValues": [
+              "true",
+              "false"
+          ],
+          "defaultValue": "false",
+          "metadata": {
+              "description": "Enables the soft-delete functionaility on the KeyVault."
+          }
+      }
+    },
+    "resources": [{
+        "name": "[parameters('keyvaultName')]",
+        "type": "Microsoft.KeyVault/vaults",
+        "apiVersion": "2019-09-01",
+        "location": "[resourceGroup().location]",
+        "tags": {
+            "displayName": "keyVault1"
+        },
+         "properties": {
+            "enabledForDeployment": true,
+            "enabledForTemplateDeployment": true,
+            "enabledForDiskEncryption": true,
+            "enableSoftDelete": "[parameters('keyVaultSoftDelete')]",
+            "tenantId": "[subscription().tenantId]",
+            "accessPolicies": [],
+            "sku": {
+                "name": "[parameters('keyvaultSku')]",
+                "family": "A"
+            }
+        }
+    }],
+    "outputs": {}
+}
