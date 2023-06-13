@@ -41,12 +41,12 @@
         "KeyVault-Name": {
             "value": "$(KeyVault-Name)"
         },
-        "appinconnectionstring": {
+        "appInsightsKeyName": {
             "reference": {
                 "keyVault": {
                     "id": "/subscriptions/8bfb7889-2f78-4dff-9e0c-c42f99f36bc5/resourcegroups/my-test-rg/providers/Microsoft.KeyVault/vaults/mykeyVaultdemooooooiiaa"
                 },
-                "secretName": "appinconnectionstring"
+                "secretName": "appInsightsKeyName"
             }
         },
 		"use32BitWorkerProcess": {
