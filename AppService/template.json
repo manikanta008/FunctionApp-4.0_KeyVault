@@ -60,7 +60,7 @@
                 "Environment": "[parameters('Env_tag')]"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('keyVaultName'), variables('appInsightsKeyName'))]"
+                "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVault-Name'), variables('appInsightsKeyName'))]"
             ],
             "identity": { 
                 "type": "SystemAssigned" 
