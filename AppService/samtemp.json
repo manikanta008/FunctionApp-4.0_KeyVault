@@ -33,44 +33,8 @@
         "metadata": {
           "description": "The name of the subscription that contains the keyvault."
         }
-      },
-      "AppType": {
-        "type": "string"
-      },
-      "Env_tag": {
-        "type": "string"
-      },
-      "Application_tag": {
-        "type": "string"
-      },
-      "name": {
-        "type": "string"
-      },
-      "hostingPlanName": {
-        "type": "string"
-      },
-      "alwaysOn": {
-        "type": "bool"
-      },
-     "currentStack": {
-        "type": "string"
-      },
-      "phpVersion": {
-        "type": "string"
-      },
-      "minTlsVersion": {
-        "type": "string"
-      },
-      "use32BitWorkerProcess": {
-        "type": "bool"
-      },
-      "ftpsState": {
-       "type": "string"
-      },
-      "netFrameworkVersion": {
-        "type": "string"
       }
-    },
+  },
   "resources": [
       {
         "type": "Microsoft.Resources/deployments",
