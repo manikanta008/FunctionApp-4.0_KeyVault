@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "AppType": {
+            "value": "api"
+        },
+        "subscriptionId": {
+            "value": "$(PO_SubscriptionId)"
+        },
+        "name": {
+            "value": "dev-poc-petromin"
+        },
+        "Env_tag": {
+            "value": "$(Env)"
+        },
+        "Application_tag": {
+            "value": "$(Application_Tag)"
+        },
+        "location": {
+            "value": "$(PO_Location)"
+        },
+        "hostingPlanName": {
+            "value": "$(PO-HostingPlanName)"
+        },
+        "serverFarmResourceGroup": {
+            "value": "$(PO_ResourceGroup)"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "currentStack": {
+            "value": "$(AppService_CurrentStack)"
+        },
+        "phpVersion": {
+            "value": "$(AppService_phpVersion)"
+        },
+		"minTlsVersion": {
+		    "value": "$(AppService_MinTLSVersion)"
+		},
+		"use32BitWorkerProcess": {
+            "value": true
+        },
+		"ftpsState": {
+            "value": "AllAllowed"
+        },
+        "netFrameworkVersion": {
+            "value": "$(AppService_NetFrameworkVersion)"
+        }
+    }
+}
