@@ -17,6 +17,9 @@
         "sku": {
             "value": "$(KeyVault-Sku)"
         },
+        "accessPolicies": {
+            "value": "$(KeyVault-AccessPolicies)"
+        },
         "tenant": {
             "value": "$(KeyVault-TenantId)"
         },
