@@ -2,72 +2,55 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-      "location": {
-        "type": "string",
-        "defaultValue": "[resourceGroup().location]",
-        "metadata": {
-          "description": "The location where the resources will be deployed."
-        }
-      },
-      "KeyVault-Name": {
-        "type": "string",
-        "metadata": {
-          "description": "The name of the keyvault that contains the secret."
-        }
-      },
-      "appInsightsKeyName": {
-        "type": "string",
-        "metadata": {
-          "description": "The name of the secret."
-        }
-      },
-      "serverFarmResourceGroup": {
-        "type": "string",
-        "metadata": {
-          "description": "The name of the resource group that contains the keyvault."
-        }
-      },
-      "subscriptionId": {
-        "type": "string",
-        "defaultValue": "[subscription().subscriptionId]",
-        "metadata": {
-          "description": "The name of the subscription that contains the keyvault."
-        }
-      },
-      "AppType": {
-        "type": "string"
-      },
-      "Env_tag": {
-        "type": "string"
-      },
-      "Application_tag": {
-        "type": "string"
-      },
-      "name": {
-        "type": "string"
-      },
-      "hostingPlanName": {
-        "type": "string"
-      },
-      "alwaysOn": {
-        "type": "bool"
-      },
-     "currentStack": {
-        "type": "string"
-      },
-      "phpVersion": {
-        "type": "string"
-      },
-      "minTlsVersion": {
-        "type": "string"
-      },
-      "use32BitWorkerProcess": {
-        "type": "bool"
-      },
-      "ftpsState": {
+    "AppType": {
        "type": "string"
       },
-      "netFrameworkVersion": {
+    "subscriptionId": {
+        "type": "string"
+      },
+    "Env_tag": {
+        "type": "string"
+      },
+    "Application_tag": {
+        "type": "string"
+      },
+    "name": {
+        "type": "string"
+      },
+    "location": {
+        "type": "string"
+      },
+    "hostingPlanName": {
+        "type": "string"
+      },
+    "serverFarmResourceGroup": {
+        "type": "string"
+      },
+    "alwaysOn": {
+        "type": "bool"
+      },
+    "currentStack": {
+        "type": "string"
+      },
+    "phpVersion": {
+        "type": "string"
+      },
+		"minTlsVersion": {
+	      "type": "string"
+		  },
+    "KeyVault-Name": {
+        "type": "string"
+      },
+    "appInsightsKeyName": {
+        "type": "securestring"
+      },
+		"use32BitWorkerProcess": {
+        "type": "bool"
+      },
+		"ftpsState": {
+        "type": "string"
+      },
+    "netFrameworkVersion": {
         "type": "string"
       }
     },
