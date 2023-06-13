@@ -20,6 +20,9 @@
         "tenant": {
             "type": "string"
         },
+        "ObjectID": {
+            "type": "string"
+        },
         "enabledForDeployment": {
             "type": "bool"
         },
@@ -59,8 +62,8 @@
                 "enableRbacAuthorization": "[parameters('enableRbacAuthorization')]",
                 "accessPolicies": [
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "keys": [
                                 "Get",
@@ -98,8 +101,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "keys": [],
                             "secrets": [
@@ -110,8 +113,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "keys": [
                                 "Get",
@@ -140,8 +143,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "certificates": [],
                             "keys": [],
@@ -152,8 +155,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "keys": [],
                             "secrets": [
@@ -165,8 +168,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "keys": [
                                 "List"
@@ -178,8 +181,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "certificates": [],
                             "keys": [],
@@ -195,8 +198,8 @@
                         }
                     },
                     {
-                        "tenantId": "$(KeyVault-TenantId)",
-                        "objectId": "$(KeyVault-ObjectId)",
+                        "tenantId": "[parameters('tenant')]",
+                        "objectId": "[parameters('ObjectID')]",
                         "permissions": {
                             "certificates": [
                                 "Get",
