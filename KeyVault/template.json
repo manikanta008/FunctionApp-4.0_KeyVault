@@ -17,6 +17,9 @@
         "sku": {
             "type": "string"
         },
+        "accessPolicies": {
+            "type": "array"
+        },
         "tenant": {
             "type": "string"
         },
