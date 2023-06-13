@@ -42,7 +42,12 @@
             "value": "$(KeyVault-Name)"
         },
         "appInsightsKeyName": {
-            "value": "$(appInsightsKeyName)"
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/$(PO_SubscriptionId)/resourceGroups/$(PO_ResourceGroup)/providers/Microsoft.KeyVault/vaults/$(KeyVault-Name)"
+                },
+                "secretName": "appInsightsKeyName"
+            }
         },
 		"use32BitWorkerProcess": {
             "value": true
