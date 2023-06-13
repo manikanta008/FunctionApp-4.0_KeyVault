@@ -71,7 +71,7 @@
         "type": "string"
       }
     },
-    "resources": [
+  "resources": [
       {
         "type": "Microsoft.Resources/deployments",
         "apiVersion": "2020-10-01",
@@ -84,6 +84,53 @@
           "template": {
             "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
             "contentVersion": "1.0.0.0",
+            "parameters": {
+              "AppType": {
+                  "type": "string"
+              },
+              "subscriptionId": {
+                  "type": "string"
+              },
+              "Env_tag": {
+                  "type": "string"
+              },
+              "Application_tag": {
+                  "type": "string"
+              },
+              "name": {
+                  "type": "string"
+              },
+              "location": {
+                  "type": "string"
+              },
+              "hostingPlanName": {
+                  "type": "string"
+              },
+              "serverFarmResourceGroup": {
+                  "type": "string"
+              },
+              "alwaysOn": {
+                  "type": "bool"
+              },
+              "currentStack": {
+                  "type": "string"
+              },
+              "phpVersion": {
+                  "type": "string"
+              },
+              "minTlsVersion": {
+                  "type": "string"
+              },
+              "use32BitWorkerProcess": {
+                      "type": "bool"
+                  },
+              "ftpsState": {
+                      "type": "string"
+                  },
+                  "netFrameworkVersion": {
+                      "type": "string"
+                  }
+              },
               "variables": {},
               "resources": [
                 {
