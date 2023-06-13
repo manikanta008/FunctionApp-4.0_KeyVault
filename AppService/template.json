@@ -71,7 +71,7 @@
                     "appSettings": [
                         {
                             "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
-                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('appInsightsKeyName')).secretUriWithVersion, ')')]",
+                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('appInsightsKeyName')).secretUriWithVersion, ')')]"
                         }
                     ],
                     "metadata": [
