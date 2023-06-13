@@ -17,11 +17,11 @@
         "sku": {
             "value": "$(KeyVault-Sku)"
         },
+        "accessPolicies": {
+            "value": "$(KeyVault-AccessPolicies)"
+        },
         "tenant": {
             "value": "$(KeyVault-TenantId)"
-        },
-        "ObjectID": {
-            "value": "$(KeyVault-ObjectId)"
         },
         "enabledForDeployment": {
             "value": true
