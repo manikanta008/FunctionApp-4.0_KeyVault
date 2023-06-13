@@ -38,6 +38,9 @@
 		"minTlsVersion": {
 		    "type": "string"
 		},
+        "KeyVault-Name": {
+            "type": "string"
+        },
 		"use32BitWorkerProcess": {
             "type": "bool"
         },
