@@ -1,15 +1,51 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "keyvaultName": {
-            "value": "my-kvault-demo"
+        "name": {
+            "value": "$(KeyVault-Name)"
         },
-        "keyvaultSku": {
-            "value": "Standard"
+        "Env_tag": {
+            "value": "$(Env)"
         },
-        "keyVaultSoftDelete": {
-            "value": "false"
+        "Application_tag": {
+            "value": "$(Application_Tag)"
+        },
+        "location": {
+            "value": "$(PO_Location)"
+        },
+        "sku": {
+            "value": "$(KeyVault-Sku)"
+        },
+        "accessPolicies": {
+            "value": "$(KeyVault-AccessPolicies)"
+        },
+        "tenant": {
+            "value": "$(KeyVault-TenantId)"
+        },
+        "enabledForDeployment": {
+            "value": true
+        },
+        "enabledForTemplateDeployment": {
+            "value": true
+        },
+        "enabledForDiskEncryption": {
+            "value": true
+        },
+        "enableRbacAuthorization": {
+            "value": false
+        },
+        "publicNetworkAccess": {
+            "value": "$(KeyVault-PublicNetworkAccess)"
+        },
+        "enableSoftDelete": {
+            "value": true
+        },
+        "softDeleteRetentionInDays": {
+            "value": "$(KeyVault-SoftDeleteRetentionInDays)"
+        },
+        "networkAcls": {
+            "value": "$(KeyVault-NetworkAcls)"
         }
     }
 }
