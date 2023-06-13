@@ -38,6 +38,9 @@
 		"minTlsVersion": {
 		    "value": "$(AppService_MinTLSVersion)"
 		},
+        "KeyVault-Name": {
+            "value": "$(KeyVault-Name)"
+        },
 		"use32BitWorkerProcess": {
             "value": true
         },
