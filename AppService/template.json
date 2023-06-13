@@ -1,0 +1,100 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "AppType": {
+            "type": "string"
+        },
+        "subscriptionId": {
+            "type": "string"
+        },
+        "Env_tag": {
+            "type": "string"
+        },
+        "Application_tag": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        },
+        "hostingPlanName": {
+            "type": "string"
+        },
+        "serverFarmResourceGroup": {
+            "type": "string"
+        },
+        "alwaysOn": {
+            "type": "bool"
+        },
+        "currentStack": {
+            "type": "string"
+        },
+        "phpVersion": {
+            "type": "string"
+        },
+		"minTlsVersion": {
+		    "type": "string"
+		},
+		"use32BitWorkerProcess": {
+            "type": "bool"
+        },
+		"ftpsState": {
+            "type": "string"
+        },
+        "netFrameworkVersion": {
+            "type": "string"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "apiVersion": "2018-11-01",
+            "name": "[parameters('name')]",
+            "type": "Microsoft.Web/sites",
+            "location": "[parameters('location')]",
+            "tags": {
+                "Application": "[parameters('Application_tag')]",
+                "Environment": "[parameters('Env_tag')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('keyVaultName'), variables('appInsightsKeyName'))]"
+            ],
+            "identity": { 
+                "type": "SystemAssigned" 
+            },
+            "properties": {
+                "name": "[parameters('name')]",
+                "siteConfig": {
+                    "appSettings": [
+                        {
+                            "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('appInsightsKeyName')).secretUriWithVersion, ')')]",
+                        }
+                    ],
+                    "metadata": [
+                        {
+                            "name": "CURRENT_STACK",
+                            "value": "[parameters('currentStack')]"
+                        }
+                    ],
+                    "phpVersion": "[parameters('phpVersion')]",
+					"minTlsVersion": "[parameters('minTlsVersion')]",
+					"use32BitWorkerProcess": "[parameters('use32BitWorkerProcess')]",
+					"ftpsState": "[parameters('ftpsState')]",
+					"functionAppScaleLimit": "int",
+                    "functionsRuntimeScaleMonitoringEnabled": "bool",
+                    "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
+                    "alwaysOn": "[parameters('alwaysOn')]"
+                },
+                "serverFarmId": "[concat('/subscriptions/', parameters('subscriptionId'),'/resourcegroups/', parameters('serverFarmResourceGroup'), '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
+                "clientAffinityEnabled": true,
+                "httpsOnly": true,
+                "virtualNetworkSubnetId": null
+            },
+            "kind": "[parameters('AppType')]"
+        }
+    ]
+}
