@@ -41,6 +41,9 @@
         "KeyVault-Name": {
             "value": "$(KeyVault-Name)"
         },
+        "appInsightsKeyName": {
+            "value": "$(appInsightsKeyName)"
+        },
 		"use32BitWorkerProcess": {
             "value": true
         },
