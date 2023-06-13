@@ -44,7 +44,7 @@
         "appInsightsKeyName": {
             "reference": {
                 "keyVault": {
-                    "id": "/subscriptions/$(PO_SubscriptionId)/resourceGroups/$(PO_ResourceGroup)/providers/Microsoft.KeyVault/vaults/$(KeyVault-Name)"
+                    "id": "[resourceId(parameters('PO_SubscriptionId'), parameters('PO_ResourceGroup'), 'Microsoft.KeyVault/vaults', parameters('KeyVault-Name'))]"
                 },
                 "secretName": "appInsightsKeyName"
             }
