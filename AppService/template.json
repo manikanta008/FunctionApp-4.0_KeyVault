@@ -42,7 +42,7 @@
             "type": "string"
         },
         "appInsightsKeyName": {
-            "type": "string"
+            "type": "securestring"
         },
 		"use32BitWorkerProcess": {
             "type": "bool"
