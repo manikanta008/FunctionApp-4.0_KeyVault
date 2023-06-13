@@ -41,6 +41,9 @@
         "KeyVault-Name": {
             "type": "string"
         },
+        "appinconnectionstring": {
+            "type": "securestring"
+        },
 		"use32BitWorkerProcess": {
             "type": "bool"
         },
@@ -62,7 +65,9 @@
                 "Application": "[parameters('Application_tag')]",
                 "Environment": "[parameters('Env_tag')]"
             },
-            "dependsOn": [],
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('appInsightsKeyName'))]"
+            ],
             "identity": { 
                 "type": "SystemAssigned" 
             },
@@ -71,10 +76,8 @@
                 "siteConfig": {
                     "appSettings": [
                         {
-                            "APPINSIGHTS_INSTRUMENTATIONKEY": {
-                                "InstrumentationKey": "<SetByKeyVault>",
-                                "IngestionEndpoint": "https://mykeyvaultdemooooooiiaa.vault.azure.net/secrets/appInsightsKeyName/6441b525b5274711b2c9ebfe56fcc305"
-                            }
+                            "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('appinconnectionstring')).secretUriWithVersion, ')')]"
                         }
                     ],
                     "metadata": [
