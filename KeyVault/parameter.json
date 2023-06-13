@@ -23,6 +23,9 @@
         "tenant": {
             "value": "$(KeyVault-TenantId)"
         },
+        "ObjectID": {
+            "value": "$(KeyVault-ObjectId)"
+        },
         "enabledForDeployment": {
             "value": true
         },
