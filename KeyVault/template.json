@@ -17,9 +17,6 @@
         "sku": {
             "type": "string"
         },
-        "accessPolicies": {
-            "type": "array"
-        },
         "tenant": {
             "type": "string"
         },
@@ -60,7 +57,190 @@
                 "enabledForTemplateDeployment": "[parameters('enabledForTemplateDeployment')]",
                 "enabledForDiskEncryption": "[parameters('enabledForDiskEncryption')]",
                 "enableRbacAuthorization": "[parameters('enableRbacAuthorization')]",
-                "accessPolicies": "[parameters('accessPolicies')]",
+                "accessPolicies": [
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Decrypt",
+                                "Encrypt",
+                                "UnwrapKey",
+                                "WrapKey",
+                                "Verify",
+                                "Sign",
+                                "Purge",
+                                "Release",
+                                "Rotate",
+                                "GetRotationPolicy",
+                                "SetRotationPolicy"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "Purge"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "keys": [],
+                            "secrets": [
+                                "Get",
+                                "List"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "GetRotationPolicy",
+                                "SetRotationPolicy",
+                                "Rotate"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "certificates": [],
+                            "keys": [],
+                            "secrets": [
+                                "Get",
+                                "List"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "keys": [],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "keys": [
+                                "List"
+                            ],
+                            "secrets": [
+                                "List"
+                            ],
+                            "certificates": []
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "certificates": [],
+                            "keys": [],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "$(KeyVault-TenantId)",
+                        "objectId": "$(KeyVault-ObjectId)",
+                        "permissions": {
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ],
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "GetRotationPolicy",
+                                "SetRotationPolicy",
+                                "Rotate"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ]
+                        }
+                    }
+                ],
                 "tenantId": "[parameters('tenant')]",
                 "sku": {
                     "name": "[parameters('sku')]",
