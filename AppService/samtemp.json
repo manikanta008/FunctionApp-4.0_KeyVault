@@ -2,9 +2,6 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "AppType": {
-       "type": "string"
-      },
     "subscriptionId": {
         "type": "string"
       },
@@ -68,9 +65,6 @@
             "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
             "contentVersion": "1.0.0.0",
             "parameters": {
-              "AppType": {
-                  "type": "string"
-              },
               "subscriptionId": {
                   "type": "string"
               },
@@ -114,8 +108,8 @@
                       "type": "string"
                   }
               },
-              "variables": {},
-              "resources": [
+            "variables": {},
+            "resources": [
                 {
                   "apiVersion": "2018-11-01",
                   "name": "[parameters('name')]",
