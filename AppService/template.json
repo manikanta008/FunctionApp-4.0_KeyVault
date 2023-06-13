@@ -41,9 +41,6 @@
         "KeyVault-Name": {
             "type": "string"
         },
-        // "appInsightsKeyName": {
-        //     "type": "securestring"
-        // },
 		"use32BitWorkerProcess": {
             "type": "bool"
         },
@@ -65,9 +62,7 @@
                 "Application": "[parameters('Application_tag')]",
                 "Environment": "[parameters('Env_tag')]"
             },
-            "dependsOn": [
-                // "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('appInsightsKeyName'))]"
-            ],
+            "dependsOn": [],
             "identity": { 
                 "type": "SystemAssigned" 
             },
