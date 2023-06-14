@@ -9,7 +9,7 @@
             "value": "$(PO_SubscriptionId)"
         },
         "name": {
-            "value": "dev-poc-petromin"
+            "value": "sampleApp11"
         },
         "Env_tag": {
             "value": "$(Env)"
