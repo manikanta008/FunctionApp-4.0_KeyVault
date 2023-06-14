@@ -38,9 +38,6 @@
 		"minTlsVersion": {
 		    "type": "string"
 		},
-        "KeyVault-Name": {
-            "type": "string"
-        },
         "AppInsightInstrumentationKey": {
             "type": "string"
         },
