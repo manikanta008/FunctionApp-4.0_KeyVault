@@ -38,6 +38,12 @@
 		"minTlsVersion": {
 		    "type": "string"
 		},
+        "KeyVault-Name": {
+            "type": "string"
+        },
+        "AppInsightInstrumentationKey": {
+            "type": "string"
+        },
 		"use32BitWorkerProcess": {
             "type": "bool"
         },
@@ -68,8 +74,8 @@
                 "siteConfig": {
                     "appSettings": [
                         {
-                            "name": "WEBSITE_RUN_FROM_PACKAGE",
-                            "value": "$(appInsightsKey)"
+                            "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+                            "value": "[parameters('appInsightsKey')]"
                         }
                     ],
                     "metadata": [
