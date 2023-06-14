@@ -41,7 +41,7 @@
         "KeyVault-Name": {
             "type": "string"
         },
-        "appInsightsKeyNamea": {
+        "Secrett": {
             "type": "securestring"
         },
 		"use32BitWorkerProcess": {
@@ -66,7 +66,7 @@
                 "Environment": "[parameters('Env_tag')]"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('appInsightsKeyNamea'))]"
+                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('Secrett'))]"
             ],
             "identity": { 
                 "type": "SystemAssigned" 
@@ -76,8 +76,8 @@
                 "siteConfig": {
                     "appSettings": [
                         {
-                            "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
-                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('appInsightsKeyNamea')).secretUriWithVersion, ')')]"
+                            "name": "testSecret",
+                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('Secrett')).secretUriWithVersion, ')')]"
                         }
                     ],
                     "metadata": [
