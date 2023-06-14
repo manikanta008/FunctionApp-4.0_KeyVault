@@ -38,6 +38,9 @@
 		"minTlsVersion": {
 		    "value": "$(AppService_MinTLSVersion)"
 		},
+        "AppInsightInstrumentationKey": {
+            "value": "$(appInsightsKey)"
+        },
 		"use32BitWorkerProcess": {
             "value": true
         },
