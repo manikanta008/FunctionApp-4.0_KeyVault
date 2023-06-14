@@ -65,9 +65,7 @@
                 "Application": "[parameters('Application_tag')]",
                 "Environment": "[parameters('Env_tag')]"
             },
-            "dependsOn": [
-                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('Secretta'))]"
-            ],
+            "dependsOn": [],
             "identity": { 
                 "type": "SystemAssigned" 
             },
