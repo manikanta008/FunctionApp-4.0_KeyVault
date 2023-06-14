@@ -8,13 +8,13 @@
     "adminPassword": {
       "reference": {
         "keyVault": {
-          "id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.KeyVault/vaults/<vault-name>"
+          "id": "/subscriptions/8bfb7889-2f78-4dff-9e0c-c42f99f36bc5/resourceGroups/my-test-rg/providers/Microsoft.KeyVault/vaults/mykeyVaultkka"
         },
-        "secretName": "ExamplePassword"
+        "secretName": "exampleadmin"
       }
     },
     "sqlServerName": {
-      "value": "<your-server-name>"
+      "value": "manikant"
     }
   }
 }
