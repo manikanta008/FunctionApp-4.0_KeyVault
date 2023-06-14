@@ -38,12 +38,6 @@
 		"minTlsVersion": {
 		    "type": "string"
 		},
-        "KeyVault-Name": {
-            "type": "string"
-        },
-        "Secretta": {
-            "type": "string"
-        },
 		"use32BitWorkerProcess": {
             "type": "bool"
         },
@@ -75,7 +69,7 @@
                     "appSettings": [
                         {
                             "name": "WEBSITE_RUN_FROM_PACKAGE",
-                            "value": "[parameters('Secretta')]"
+                            "value": "$(appInsightsKey)"
                         }
                     ],
                     "metadata": [
