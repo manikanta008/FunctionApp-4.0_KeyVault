@@ -72,7 +72,7 @@
                     "appSettings": [
                         {
                             "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
-                            "value": "[parameters('appInsightsKey')]"
+                            "value": "[parameters('AppInsightInstrumentationKey')]"
                         }
                     ],
                     "metadata": [
