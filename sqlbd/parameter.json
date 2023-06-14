@@ -5,6 +5,21 @@
     "adminLogin": {
       "value": "exampleadmin"
     },
+    "location": {
+      "value": "$(PO_Location)"
+    },
+    "vaultName": {
+      "value": "$(KeyVault-Name)"
+    },
+    "secretName": {
+      "value": "exampleadmin"
+    },
+    "vaultResourceGroupName": {
+      "value": "my-test-rg"
+    },
+    "vaultSubscription": {
+      "value": "8bfb7889-2f78-4dff-9e0c-c42f99f36bc5"
+    },
     "adminPassword": {
       "reference": {
         "keyVault": {
