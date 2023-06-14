@@ -32,6 +32,12 @@
         "storageAccountName": {
             "type": "string"
         },
+        "KeyVault-Name": {
+            "type": "string"
+        },
+        "Secrettaa": {
+            "type": "securestring"
+        },
         "sku": {
             "type": "string"
         },
@@ -61,7 +67,8 @@
                 "Environment": "$(Env_tag)"
             },
             "dependsOn": [
-                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
+                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('Secrettaa'))]"
             ],
             "properties": {
                 "name": "[parameters('name')]",
@@ -73,7 +80,7 @@
                         },
                         {
                             "name": "FUNCTIONS_WORKER_RUNTIME",
-                            "value": "dotnet-isolated"
+                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('Secrettaa')).secretUriWithVersion, ')')]"
                         },
                         {
                             "name": "AzureWebJobsStorage",
