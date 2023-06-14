@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "$(PO_SubscriptionId)"
+        },
+        "name": {
+            "value": "$(FunctionApp-Name)"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "hostingPlanName": {
+            "value": "$(FunctionApp-HostingPlanName)"
+        },
+        "serverFarmResourceGroup": {
+            "value": "$(FunctionApp-StorageAccount-ResourceGroupName)"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+		"use32BitWorkerProcess": {
+            "value": true
+        },
+		"netFrameworkVersion": {
+            "value": "$(FunctionApp_NetFrameworkVersion)"
+        },
+        "ftpsState": {
+            "value": "AllAllowed"
+        },
+        "storageAccountName": {
+            "value": "$(FunctionApp-StorageAccountName)"
+        },
+        "sku": {
+            "value": "$(FunctionApp-Sku)"
+        },
+        "skuCode": {
+            "value": "$(FunctionApp-SkuCode)"
+        },
+        "workerSize": {
+            "value": "$(PO_WorkerSize)"
+        },
+        "workerSizeId": {
+            "value": "$(PO_WorkerSizeId)"
+        },
+        "numberOfWorkers": {
+            "value": "$(PO_NumberOfWorkers)"
+        }
+    }
+}
