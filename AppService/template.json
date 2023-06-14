@@ -41,7 +41,7 @@
         "KeyVault-Name": {
             "type": "string"
         },
-        "Secrett": {
+        "Secretta": {
             "type": "securestring"
         },
 		"use32BitWorkerProcess": {
@@ -66,7 +66,7 @@
                 "Environment": "[parameters('Env_tag')]"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('Secrett'))]"
+                "[resourceId('Microsoft.KeyVault/vaults/secrets', parameters('KeyVault-Name'), parameters('Secretta'))]"
             ],
             "identity": { 
                 "type": "SystemAssigned" 
@@ -77,7 +77,7 @@
                     "appSettings": [
                         {
                             "name": "WEBSITE_RUN_FROM_PACKAGE",
-                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('Secrett')).secretUriWithVersion, ')')]"
+                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('Secretta')).secretUriWithVersion, ')')]"
                         }
                     ],
                     "metadata": [
