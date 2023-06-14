@@ -2,9 +2,6 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "adminLogin": {
-      "value": "exampleadmin"
-    },
     "location": {
       "value": "$(PO_Location)"
     },
@@ -19,14 +16,6 @@
     },
     "vaultSubscription": {
       "value": "8bfb7889-2f78-4dff-9e0c-c42f99f36bc5"
-    },
-    "adminPassword": {
-      "reference": {
-        "keyVault": {
-          "id": "/subscriptions/8bfb7889-2f78-4dff-9e0c-c42f99f36bc5/resourceGroups/my-test-rg/providers/Microsoft.KeyVault/vaults/mykeyVaultkka"
-        },
-        "secretName": "exampleadmin"
-      }
     }
   }
 }
