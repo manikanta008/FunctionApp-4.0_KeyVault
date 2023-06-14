@@ -42,7 +42,7 @@
             "type": "string"
         },
         "Secretta": {
-            "type": "securestring"
+            "type": "string"
         },
 		"use32BitWorkerProcess": {
             "type": "bool"
@@ -77,7 +77,7 @@
                     "appSettings": [
                         {
                             "name": "WEBSITE_RUN_FROM_PACKAGE",
-                            "value": "[concat('@Microsoft.KeyVault(SecretUri=', reference(parameters('Secretta')).secretUriWithVersion, ')')]"
+                            "value": "[parameters('Secretta')]"
                         }
                     ],
                     "metadata": [
