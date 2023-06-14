@@ -27,9 +27,6 @@
         },
         "secretName": "exampleadmin"
       }
-    },
-    "sqlServerName": {
-      "value": "manikant"
     }
   }
 }
