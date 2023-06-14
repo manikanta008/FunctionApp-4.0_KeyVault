@@ -41,9 +41,6 @@
         "KeyVault-Name": {
             "value": "$(KeyVault-Name)"
         },
-        "Secretta": {
-            "value": "$(secretta)"
-        },
 		"use32BitWorkerProcess": {
             "value": true
         },
