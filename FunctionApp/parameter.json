@@ -17,6 +17,9 @@
         "serverFarmResourceGroup": {
             "value": "my-test-rg"
         },
+        "storageAccountResourceGroupName": {
+            "value": "Central India"
+        },
         "alwaysOn": {
             "value": false
         },
