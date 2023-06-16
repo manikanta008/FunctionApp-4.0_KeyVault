@@ -3,19 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "value": "$(PO_SubscriptionId)"
+            "value": "8bfb7889-2f78-4dff-9e0c-c42f99f36bc5"
         },
         "name": {
-            "value": "$(FunctionApp-Name)"
+            "value": "myfunapp11"
         },
         "location": {
             "value": "eastus"
         },
         "hostingPlanName": {
-            "value": "$(FunctionApp-HostingPlanName)"
+            "value": "myfunapplan11"
         },
         "serverFarmResourceGroup": {
-            "value": "$(FunctionApp-StorageAccount-ResourceGroupName)"
+            "value": "my-test-rg"
         },
         "alwaysOn": {
             "value": false
@@ -24,39 +24,28 @@
             "value": true
         },
 		"netFrameworkVersion": {
-            "value": "$(FunctionApp_NetFrameworkVersion)"
+            "value": "v4.0"
         },
         "ftpsState": {
             "value": "AllAllowed"
         },
         "storageAccountName": {
-            "value": "$(FunctionApp-StorageAccountName)"
-        },
-        "KeyVault-Name": {
-            "value": "$(KeyVault-Name)"
-        },
-        "Secrettaa": {
-            "reference": {
-                "keyVault": {
-                    "id": "/subscriptions/8bfb7889-2f78-4dff-9e0c-c42f99f36bc5/resourcegroups/my-test-rg/providers/Microsoft.KeyVault/vaults/mykeyVaultkka"
-                },
-                "secretName": "Secrettaa"
-            }
+            "value": "csg10032002ab70ee10"
         },
         "sku": {
-            "value": "$(FunctionApp-Sku)"
+            "value": "Dynamic"
         },
         "skuCode": {
-            "value": "$(FunctionApp-SkuCode)"
+            "value": "Y1"
         },
         "workerSize": {
-            "value": "$(PO_WorkerSize)"
+            "value": "0"
         },
         "workerSizeId": {
-            "value": "$(PO_WorkerSizeId)"
+            "value": "0"
         },
         "numberOfWorkers": {
-            "value": "$(PO_NumberOfWorkers)"
+            "value": "1"
         }
     }
 }
