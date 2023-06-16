@@ -11,12 +11,6 @@
         "location": {
             "type": "string"
         },
-        "Env_tag": {
-            "type": "string"
-        },
-        "Application_Tag": {
-            "type": "string"
-        },
         "hostingPlanName": {
             "type": "string"
         },
