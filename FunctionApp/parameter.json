@@ -33,10 +33,10 @@
             "value": "csg10032002ab70ee10"
         },
         "sku": {
-            "value": "Dynamic"
+            "value": "Standard"
         },
         "skuCode": {
-            "value": "Y1"
+            "value": "S1"
         },
         "workerSize": {
             "value": "0"
