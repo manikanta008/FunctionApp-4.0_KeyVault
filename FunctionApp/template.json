@@ -60,8 +60,8 @@
             "kind": "functionapp",
             "location": "[parameters('location')]",
             "tags": {
-                "Application": "[parameters('Application_Tag')]",
-                "Environment": "[parameters('Env_tag')]"
+                "Application": "[]",
+                "Environment": "[]"
             },
             "dependsOn": [
                 "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]"
