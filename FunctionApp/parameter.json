@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subscriptionId": {
-            "value": "8bfb7889-2f78-4dff-9e0c-c42f99f36bc5"
+            "value": "$(PO_SubscriptionId)"
         },
         "name": {
             "value": "my-funapp-service11"
@@ -12,13 +12,13 @@
             "value": "uaenorth"
         },
         "hostingPlanName": {
-            "value": "myfunapplan11"
+            "value": "$(PO-HostingPlanName)"
         },
         "serverFarmResourceGroup": {
-            "value": "my-test-rg"
+            "value": "$(PO_ResourceGroup)"
         },
         "storageAccountResourceGroupName": {
-            "value": "Central India"
+            "value": "$(PO_ResourceGroup)"
         },
         "alwaysOn": {
             "value": false
@@ -33,13 +33,13 @@
             "value": "AllAllowed"
         },
         "storageAccountName": {
-            "value": "csg10032002ab70ee10"
+            "value": "mystorageacc1111q"
         },
         "sku": {
-            "value": "Standard"
+            "value": "Dynamic"
         },
         "skuCode": {
-            "value": "S1"
+            "value": "Y1"
         },
         "workerSize": {
             "value": "0"
