@@ -30,22 +30,22 @@
             "value": "AllAllowed"
         },
         "storageAccountName": {
-            "value": "$(FunctionApp-StorageAccountName)"
+            "value": "mystorageacc1111q"
         },
         "sku": {
-            "value": "$(FunctionApp-Sku)"
+            "value": "Dynamic"
         },
         "skuCode": {
-            "value": "$(FunctionApp-SkuCode)"
+            "value": "Y1"
         },
         "workerSize": {
-            "value": "$(PO_WorkerSize)"
+            "value": "0"
         },
         "workerSizeId": {
-            "value": "$(PO_WorkerSizeId)"
+            "value": "0"
         },
         "numberOfWorkers": {
-            "value": "$(PO_NumberOfWorkers)"
+            "value": "1"
         }
     }
 }
