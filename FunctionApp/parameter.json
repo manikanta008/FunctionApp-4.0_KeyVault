@@ -24,7 +24,7 @@
             "value": true
         },
 		"netFrameworkVersion": {
-            "value": "v6.0"
+            "value": "v3.0"
         },
         "ftpsState": {
             "value": "AllAllowed"
