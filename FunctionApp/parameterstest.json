@@ -24,7 +24,7 @@
             "value": true
         },
 		"netFrameworkVersion": {
-            "value": "$(FunctionApp_NetFrameworkVersion)"
+            "value": "v4.0"
         },
         "ftpsState": {
             "value": "AllAllowed"
