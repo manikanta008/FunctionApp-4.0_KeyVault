@@ -9,15 +9,12 @@
             "value": "my-funapp-service11"
         },
         "location": {
-            "value": "uaenorth"
+            "value": "$(PO_Location)"
         },
         "hostingPlanName": {
             "value": "$(PO-HostingPlanName)"
         },
         "serverFarmResourceGroup": {
-            "value": "$(PO_ResourceGroup)"
-        },
-        "storageAccountResourceGroupName": {
             "value": "$(PO_ResourceGroup)"
         },
         "alwaysOn": {
@@ -27,7 +24,7 @@
             "value": true
         },
 		"netFrameworkVersion": {
-            "value": "v3.0"
+            "value": "v6.0"
         },
         "ftpsState": {
             "value": "AllAllowed"
