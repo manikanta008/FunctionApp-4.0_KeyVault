@@ -15,7 +15,7 @@
             "value": "$(PO-HostingPlanName)"
         },
         "serverFarmResourceGroup": {
-            "value": "$(FunctionApp-StorageAccount-ResourceGroupName)"
+            "value": "$(PO_ResourceGroup)"
         },
         "alwaysOn": {
             "value": false
