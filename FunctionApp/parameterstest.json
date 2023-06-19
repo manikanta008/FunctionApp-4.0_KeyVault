@@ -6,7 +6,7 @@
             "value": "$(PO_SubscriptionId)"
         },
         "name": {
-            "value": "$(FunctionApp-Name)"
+            "value": "my-funapp-service11"
         },
         "location": {
             "value": "$(PO_Location)"
